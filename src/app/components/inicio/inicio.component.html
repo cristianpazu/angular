@@ -1,0 +1,14 @@
+<div class="card text-white bg-dark mb-3" *ngFor="let ve of ventas2; let i = index" style="width: 18rem;">
+
+    <div class="card-body">{{i}}
+        <h5 class="card-title">id -{{ve.idProducto}}</h5>
+        <h5 class="card-title">{{ve.nombre}}</h5>
+        <p class="card-text">{{ve.precio}}</p>
+        <p class="card-text">{{ve.categoria}}</p>
+        <button class="btn btn-danger" (click)="eliminardatos(ve,i)">Eliminar</button>
+        <button class="btn btn-info" [routerLink]="['/registro', ve.idProducto]">editar</button>
+    </div>
+</div>
+<div *ngIf="cargando" class="alert alert-primary mt-3" role="alert">
+    <h4 class="alert-heading">Cargando registro.......</h4>
+</div>

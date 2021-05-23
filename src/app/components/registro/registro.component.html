@@ -1,0 +1,37 @@
+<div class="row animated fadeIn faster">
+    <div class="col">
+        <form (ngSubmit)="registrar(f)" #f="ngForm">
+
+
+            <div class="form-group">
+                <label>nombre</label>
+                <input type="text" class="form-control" placeholder="nombre del producto" name="nombre" [(ngModel)]="cliente.nombre" required>
+
+            </div>
+
+
+            <div class="form-group">
+                <label>poder</label>
+                <input type="text" class="form-control" placeholder="precio del producto" name="precio" [(ngModel)]="cliente.precio" required>
+
+            </div>
+            <div class="form-group">
+                <label>poder</label>
+                <input type="text" class="form-control" placeholder="categoria" name="categoria" [(ngModel)]="cliente.categoria" required>
+
+            </div>
+
+            <hr>
+            <div class="form-group">
+                <button class="btn btn-primary w-25" type="submit">
+                    guardar
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div *ngIf="cargando" class="alert alert-info mt-3" role="alert">
+    <h4 class="alert-heading">Registro exitoso</h4>
+</div>

@@ -1,0 +1,14 @@
+<p>bus works!</p>
+<div class="card text-white bg-dark mb-3" *ngFor="let ve of tie; let i = index" style="width: 18rem;">
+
+    <div class="card-body">{{i}}
+        <h5 class="card-title">idproducto -{{ve.idProducto}}</h5>
+        <h2>nombre:</h2>
+        <h5 class="card-title">{{ve.nombre}}</h5>
+        <h2>precio:</h2>
+        <p class="card-text">{{ve.precio}}</p>
+        <h2>categoria:</h2>
+        <p class="card-text">{{ve.categoria}}</p>
+
+    </div>
+</div>
